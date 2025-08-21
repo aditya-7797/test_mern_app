@@ -14,7 +14,9 @@
 
     "start:server": "cd backend && npm run dev",
 
-    "client": "set PORT=3001 && npm start --prefix client"
+    "client": "set PORT=3001 && npm start --prefix client",
+
+    "build": "npm ci --prefix client && npm run build --prefix client"
 
   },
 
