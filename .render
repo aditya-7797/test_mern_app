@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: interior-design-frontend
+    env: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://your-backend-url.onrender.com
+        sync: false
+      - key: NODE_ENV
+        value: production
+        sync: false

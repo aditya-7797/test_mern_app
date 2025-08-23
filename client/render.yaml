@@ -2,7 +2,7 @@ services:
   - type: web
     name: interior-design-frontend
     env: static
-    buildCommand: npm run build:render
+    buildCommand: npm install && npm run build
     staticPublishPath: ./build
     envVars:
       - key: REACT_APP_API_URL
